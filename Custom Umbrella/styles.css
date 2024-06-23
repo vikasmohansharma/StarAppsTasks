@@ -1,0 +1,194 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  position: relative;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#logoUpload {
+  display: none; /* Hide the default file input */
+}
+
+#logoDisplay {
+  z-index: 1;
+  margin-top: 70%;
+  position: absolute;
+}
+
+#logoImage {
+  max-height: 30px;
+  max-width: 120px;
+}
+
+.umbrella-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.loader {
+  position: absolute;
+  /*   width: 50px;
+    height: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  animation: rotate 1.5s linear infinite;
+}
+
+.spinner circle {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 75;
+  transform-origin: center;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 283;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 141.5, 283;
+    stroke-dashoffset: -75;
+  }
+  100% {
+    stroke-dasharray: 1, 283;
+    stroke-dashoffset: -150;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.instructions p {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.buttondiv {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  display: inline-block;
+}
+
+.color-button {
+  margin: 15px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0;
+}
+.color-button:hover {
+  width: 25px;
+  height: 25px;
+}
+
+.upload-section {
+  margin-top: 20px;
+}
+.upload-container {
+  position: relative;
+  display: inline-block;
+}
+
+#uploadButton {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  width: 260px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#uploadsvg {
+  float: left;
+  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  stroke-width: 5;
+  fill: white;
+}
+
+#buttonText {
+  margin-right: 10px;
+}
+
+#fileName {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#cancelIcon {
+  display: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#cancelIcon:hover {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+}
+#uploadButton.active #cancelIcon {
+  display: inline;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
